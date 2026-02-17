@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="logo" type="id" />
+    <item name="tvChangePass" type="id" />
+    <item name="headerBackground" type="id" />
+    <item name="tvTitle" type="id" />
+</resources>

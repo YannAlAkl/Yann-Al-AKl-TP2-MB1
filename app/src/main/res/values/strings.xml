@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Yann Al Akl-MB1C7-TP2</string>
+    <string name="login">login</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
+    <string name="jean_dupont">jean.dupont</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="connexion">CONNEXION</string>
+    <string name="changer_le_mot_de_passe">Changer le mot de passe</string>
+    <string name="nouvel_utilisateur">Nouvel utilisateur</string>
+
+
+</resources>
