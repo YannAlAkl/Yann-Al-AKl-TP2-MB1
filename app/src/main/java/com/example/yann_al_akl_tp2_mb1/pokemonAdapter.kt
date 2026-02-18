@@ -1,25 +1,36 @@
 package com.example.yann_al_akl_tp2_mb1
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class PokemonAdapter(private val pkmnList: List<PokemonResult>) : RecyclerView.Adapter<PokemonAdapter.VH>() {
+import com.example.yann_al_akl_tp2_mb1.databinding.TemplatePokemonBinding
 
-    class VH(itemView: View) : RecyclerView.ViewHolder(itemView)
+class PokemonAdapter(private val list: MutableList<PokemonResult>) :
+    RecyclerView.Adapter<PokemonAdapter.VH>() {
+
+    class VH(val binding: TemplatePokemonBinding) : RecyclerView.ViewHolder(binding.root)
+
+    override fun getItemCount(): Int = list.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.template_pokemon, parent, false)
-        return VH(view)
+        val binding = TemplatePokemonBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return VH(binding)
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        val currentPokemon = pkmnList[position]
+        val p = list[position]
+        holder.binding.tvName.text = p.name
+        holder.binding.tvUrl.text = p.url
     }
 
-    override fun getItemCount(): Int {
-        return pkmnList.size
+    fun updateData(newList: List<PokemonResult>) {
+        list.clear()
+        list.addAll(newList)
+        notifyDataSetChanged()
     }
 }

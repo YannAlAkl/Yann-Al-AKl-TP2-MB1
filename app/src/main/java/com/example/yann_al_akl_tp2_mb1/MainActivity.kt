@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Utilisateur non trouvé", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Connexion réussie", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, PokedexActivity::class.java))
         }
 
     }
