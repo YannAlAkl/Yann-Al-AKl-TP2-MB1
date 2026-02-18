@@ -18,6 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+
     <TextView
         android:id="@+id/tvUrl"
         android:layout_width="0dp"
