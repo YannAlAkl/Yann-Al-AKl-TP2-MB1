@@ -1,4 +1,4 @@
-package com.example.yannalakl_mb1c7_tp2
+package com.example.yann_al_akl_tp2_mb1
 
 // Utilisation de parenthèses pour le constructeur et String avec une majuscule
 data class PokemonResponse(

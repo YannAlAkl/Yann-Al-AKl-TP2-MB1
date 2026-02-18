@@ -1,6 +1,5 @@
 <resources>
-
-    <style name="Theme.YannAlAklMB1C7TP2" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.YannAlAKlTP2MB1" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#1E88E5</item>
     </style>
 </resources>

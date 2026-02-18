@@ -1,7 +1,5 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme.YannAlAklMB1C7TP2" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.YannAlAKlTP2MB1" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 </resources>

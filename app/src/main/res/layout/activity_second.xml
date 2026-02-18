@@ -7,34 +7,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:padding="16dp"
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/title2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:background="@color/blueGreen"
-        android:text="@string/title"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        android:gravity="center_vertical"
-        android:paddingStart="32dp"
+        android:id="@+id/creerCompte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/inscription"
+        android:textColor="#003366"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="0dp"
+        android:id="@+id/lbUsername"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/hello"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="60sp"
+        android:layout_marginTop="40dp"
+        android:text="@string/nom_d_utilisateur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creerCompte" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/jean_dupont"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title2" />
+        app:layout_constraintTop_toBottomOf="@+id/lbUsername" />
+
+    <TextView
+        android:id="@+id/lbPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mot_de_passe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbPassword" />
+
+    <TextView
+        android:id="@+id/lbConfirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/comfirmer_mots_de_passe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPass" />
+
+    <EditText
+        android:id="@+id/etConfirmPass"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbConfirmPass" />
+
+    <Button
+        android:id="@+id/btnInscription"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#1E88E5"
+        android:text="@string/s_inscre"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etConfirmPass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

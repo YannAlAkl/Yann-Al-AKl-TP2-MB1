@@ -5,8 +5,15 @@
     <string name="jean_dupont">jean.dupont</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="connexion">CONNEXION</string>
-    <string name="changer_le_mot_de_passe">Changer le mot de passe</string>
     <string name="nouvel_utilisateur">Nouvel utilisateur</string>
-
-
+    <string name="title">Second Activity</string>
+    <string name="hello">Hello!</string>
+    <string name="s_inscre">s\'inscre</string>
+    <string name="inscription">inscription</string>
+    <string name="comfirmer_mots_de_passe">comfirmer mots de passe</string>
+    <string name="reinitialiser_le_mot_de_passe">Reinitialiser le mot de passe</string>
+    <string name="confirmer_nouveau_mot_depasse">confirmer Nouveau Mot De Passe</string>
+    <string name="nouveau_mot_de_passe">Nouveau mot de passe</string>
+    <string name="nom_dutilisateur">Nom d\'utilisateur</string>
+    <string name="changer_le_mot_de_passe">Changer le mot de passe</string>
 </resources>
