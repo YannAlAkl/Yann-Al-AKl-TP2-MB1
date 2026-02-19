@@ -13,7 +13,6 @@ class SecondActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySecondBinding
     private lateinit var sharedPreferences: SharedPreferences
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
@@ -25,12 +24,10 @@ class SecondActivity : AppCompatActivity() {
             setUpUser()
         }
     }
-
     private fun setUpUser() {
         val user = binding.etUsername.text.toString().trim()
         val pass = binding.etPass.text.toString().trim()
         val confirmPass = binding.etConfirmPass.text.toString().trim()
-
         if (user.isEmpty() || pass.isEmpty() || confirmPass.isEmpty()) {
             Toast.makeText(this, "Champs vides", Toast.LENGTH_SHORT).show()
             return
@@ -50,7 +47,6 @@ class SecondActivity : AppCompatActivity() {
             gotoMainActivity()
         }
     }
-
     private fun saveUserToPrefs(user: String, pass: String) {
         sharedPreferences.edit {
             putString(user, pass)
@@ -58,11 +54,9 @@ class SecondActivity : AppCompatActivity() {
             apply()
         }
     }
-
     private fun userExists(user: String): Boolean {
         return sharedPreferences.contains(user)
     }
-
     private fun gotoMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)

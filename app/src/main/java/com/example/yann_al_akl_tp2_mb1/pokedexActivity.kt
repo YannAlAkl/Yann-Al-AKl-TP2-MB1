@@ -14,8 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.net.URL
 
-class PokedexActivity : AppCompatActivity() {
-
+class pokedexActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPokedexBinding
     private val list = mutableListOf<PokemonResult>()
     private lateinit var adapter: PokemonAdapter
@@ -31,21 +30,20 @@ class PokedexActivity : AppCompatActivity() {
 
         loadPokemon()
     }
-
     private fun loadPokemon() {
         binding.progressBar.visibility = View.VISIBLE
 
         lifecycleScope.launch {
             try {
                 val response: PokemonResponse = withContext(Dispatchers.IO) {
-                    val json = URL("https://pokeapi.co/api/v2/pokemon?limit=20").readText()
+                    val json = URL("https://unpkg.com/pokemons@1.1.0/pokemons.json").readText()
                     Gson().fromJson(json, PokemonResponse::class.java)   // IMPORTANT: last line = returned value
                 }
 
                 adapter.updateData(response.results)
 
             } catch (e: Exception) {
-                Toast.makeText(this@PokedexActivity, "Erreur API", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@pokedexActivity, "Erreur API", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressBar.visibility = View.GONE
             }

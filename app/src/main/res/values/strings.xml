@@ -20,4 +20,17 @@
     <string name="name">name</string>
     <string name="url">url</string>
     <string name="pokemon">pokemon</string>
+    <string name="total">total</string>
+
+    <string name="pokemon_name">Name</string>
+    <string name="pokemon_number">#</string>
+    <string name="pokemon_types">Types</string>
+    <string name="hp_label">HP: </string>
+    <string name="atk_label">ATK: </string>
+    <string name="def_label">DEF: </string>
+    <string name="sp_atk_label">S.ATK: </string>
+    <string name="sp_def_label">S.DEF: </string>
+    <string name="speed_label">SPD: </string>
+    <string name="total_label">TOTAL: </string>
+    <string name="search_pokemon">Search Pokemon...</string>
 </resources>

@@ -4,9 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.yann_al_akl_tp2_mb1"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.yann_al_akl_tp2_mb1"
@@ -45,4 +43,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.code.gson:gson:2.8.8")
+    implementation(libs.coil)
 }

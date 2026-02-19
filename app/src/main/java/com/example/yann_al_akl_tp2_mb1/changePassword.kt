@@ -10,17 +10,14 @@ import androidx.core.content.edit
 
 class changePassword : AppCompatActivity() {
     private lateinit var binding: ActivityChangePasswordBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChangePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
         binding.btnSavePassword.setOnClickListener {
             restPassword()
         }
     }
-
     private fun restPassword() {
         val user = binding.etInputUsername.text.toString().trim()
         val newPass = binding.etNewPassword.text.toString().trim()
@@ -36,14 +33,12 @@ class changePassword : AppCompatActivity() {
             goToMainActivity()
         }
     }
-
     private fun saveNewPass(user: String, newPass: String) {
         val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
         sharedPreferences.edit {
             putString(user, newPass)
         }
     }
-
     private fun goToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)

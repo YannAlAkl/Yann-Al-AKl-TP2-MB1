@@ -1,32 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pokemon"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvUrl"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="https://pokeapi.co/api/v2/pokemon/1/"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvName"/>
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/pokemon_number" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@+id/tvNumber"
+            app:layout_constraintStart_toEndOf="@+id/ivPokemon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/pokemon_name" />
+
+        <TextView
+            android:id="@+id/tvTypes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#1976D2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="@string/pokemon_types" />
+
+        <GridLayout
+            android:id="@+id/statsGrid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPokemon">
+
+            <TextView
+                android:id="@+id/tvHP"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:textSize="12sp"
+                tools:text="@string/hp_label" />
+
+            <TextView
+                android:id="@+id/tvAttack"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:textSize="12sp"
+                tools:text="@string/atk_label" />
+
+            <TextView
+                android:id="@+id/tvDefense"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:textSize="12sp"
+                tools:text="@string/def_label" />
+
+            <TextView
+                android:id="@+id/tvSpAtk"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                tools:text="@string/sp_atk_label" />
+
+            <TextView
+                android:id="@+id/tvSpDef"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                tools:text="@string/sp_def_label" />
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                tools:text="@string/speed_label" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statsGrid"
+            tools:text="@string/total_label" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotal">
+
+            <ImageView
+                android:id="@+id/ivLarge"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <ImageView
+                android:id="@+id/ivAnimated"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

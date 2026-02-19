@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context= ".MainActivity">
 
-    <!-- Logo -->
-
-    <!-- Champ Nom d'utilisateur -->
     <TextView
         android:id="@+id/imageTitle"
         android:layout_width="wrap_content"
@@ -37,6 +34,7 @@
         android:id="@+id/etUsername"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:autofillHints=""
         android:hint="@string/jean_dupont"
         android:padding="10dp"
         android:background="@android:drawable/edit_text"
@@ -44,7 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Champ Mot de passe -->
     <TextView
         android:id="@+id/labelPassword"
         android:layout_width="wrap_content"
@@ -58,6 +55,7 @@
         android:id="@+id/etPassword"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:autofillHints=""
         android:inputType="textPassword"
         android:padding="10dp"
         android:background="@android:drawable/edit_text"
@@ -65,7 +63,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Bouton Connexion -->
     <Button
         android:id="@+id/btnConnect"
         android:layout_width="0dp"
@@ -78,7 +75,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Options du bas -->
     <TextView
         android:id="@+id/tvNewUser"
         android:layout_width="wrap_content"
