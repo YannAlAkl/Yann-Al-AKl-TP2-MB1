@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
     private fun gotoChangePassword() {
-        val intent = Intent(this, changePassword::class.java)
+        val intent = Intent(this, ChangePassword::class.java)
         startActivity(intent)
     }
 }

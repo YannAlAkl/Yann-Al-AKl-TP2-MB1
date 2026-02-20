@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.yann_al_akl_tp2_mb1.databinding.ActivityChangePasswordBinding
 import androidx.core.content.edit
 
-class changePassword : AppCompatActivity() {
+class ChangePassword : AppCompatActivity() {
     private lateinit var binding: ActivityChangePasswordBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

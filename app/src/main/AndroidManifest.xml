@@ -16,7 +16,7 @@
             android:name=".PokedexActivity"
             android:exported="false" />
         <activity
-            android:name=".changePassword"
+            android:name=".ChangePassword"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
