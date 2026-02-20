@@ -16,7 +16,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="63dp" />
@@ -36,6 +36,7 @@
         android:layout_height="50dp"
         android:autofillHints=""
         android:hint="@string/jean_dupont"
+        android:inputType="text"
         android:padding="10dp"
         android:background="@android:drawable/edit_text"
         app:layout_constraintTop_toBottomOf="@id/labelUsername"

@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.net.URL
 
-class pokedexActivity : AppCompatActivity() {
+class PokedexActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPokedexBinding
     private val list = mutableListOf<PokemonResult>()
     private lateinit var adapter: PokemonAdapter
@@ -43,7 +43,7 @@ class pokedexActivity : AppCompatActivity() {
                 adapter.updateData(response.results)
 
             } catch (e: Exception) {
-                Toast.makeText(this@pokedexActivity, "Erreur API", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PokedexActivity, "Erreur API", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressBar.visibility = View.GONE
             }
