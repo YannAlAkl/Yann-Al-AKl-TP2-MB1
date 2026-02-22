@@ -11,4 +11,6 @@
     <color name="lightGray">#9E9E9E</color>
    <color name="skyBlue">#1976D2</color>
     <color name="red">#FF0000</color>
+    <color name="textDark">#003366</color>
+    <color name="mediumBlue">#1E88E5</color>
 </resources>
